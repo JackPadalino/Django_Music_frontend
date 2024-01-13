@@ -19,6 +19,7 @@ const Footer = ({ currentTrack }) => {
   const footerRef = useRef(null);
 
   const playSong = (currentTrack) => {
+    console.log(currentTrack)
     if (footerRef.current) {
       if (wavesurferRef.current) {
         // destroy the current instance before creating a new one
@@ -42,7 +43,7 @@ const Footer = ({ currentTrack }) => {
       });
 
       wavesurferRef.current.load(
-        `https://django-music-backend.onrender.com/api/music/tracks/${currentTrack.trackId}/play`
+        currentTrack.trackFile
       );
       wavesurferRef.current.play();
 
@@ -59,7 +60,7 @@ const Footer = ({ currentTrack }) => {
   const downloadSong = async (currentTrack) => {
     try {
       const response = await axios.get(
-        `https://django-music-backend.onrender.com/api/music/tracks/${currentTrack.trackId}/download`,
+        `http://localhost:8000/api/music/tracks/${currentTrack.trackId}/download`,
         {
           responseType: "blob",
         }
@@ -94,7 +95,7 @@ const Footer = ({ currentTrack }) => {
       <div>
         <div>
           <img
-            src={`https://django-music-backend.onrender.com${currentTrack.trackAlbumCover}`}
+            src={currentTrack.trackAlbumCover}
             alt={`${currentTrack.trackTitle} cover`}
           />
         </div>
