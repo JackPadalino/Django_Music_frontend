@@ -1,0 +1,66 @@
+.catalogContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: Helvetica;
+}
+
+.artistsFormContainer {
+  display: flex;
+  gap: 15px;
+}
+
+.tracksFormContainer {
+  display: flex;
+  gap: 15px;
+}
+
+.catalogHeader {
+  display: flex;
+  gap: 15px;
+  color: white;
+}
+
+.addArtistTrack {
+  color: lightgreen;
+  font-family: Helvetica;
+  cursor: pointer;
+}
+
+/* textParagraph slide effect */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.trackArtistParagraph {
+  color: grey;
+  position: relative;
+  transition: color 0.5s ease;
+}
+
+.trackArtistParagraph:hover {
+  color: white;
+  cursor: pointer;
+  animation: slide 5s linear;
+  animation-delay: 1s;
+}
+
+.outerContainer {
+  padding: 15px;
+  width: 15%;
+  background-color: rgb(52, 52, 52);
+}
+
+.innerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  overflow: hidden;
+}

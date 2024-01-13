@@ -1,0 +1,34 @@
+/* .homeContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.menuLeft {
+  border: 1px solid white;
+  width: 15%;
+}
+
+.menuRight {
+  border: 1px solid white;
+  width: 15%;
+} */
+
+.carouselOuter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+
+.carouselInner {
+  width: 50%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
