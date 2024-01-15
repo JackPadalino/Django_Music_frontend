@@ -57,7 +57,8 @@ const Home = () => {
 
   // Carousl logic
   const images = storeTracks.map(
-    (image) => image.album_cover
+    (image) => `${image.album_cover}`
+    // (image) => `http://localhost:8000${image.album_cover}`
   );
   const [[page, direction], setPage] = useState([0, 0]);
   const [carouselTrack, setCarouselTrack] = useState(null);

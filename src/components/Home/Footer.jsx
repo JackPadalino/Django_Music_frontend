@@ -19,7 +19,6 @@ const Footer = ({ currentTrack }) => {
   const footerRef = useRef(null);
 
   const playSong = (currentTrack) => {
-    console.log(currentTrack)
     if (footerRef.current) {
       if (wavesurferRef.current) {
         // destroy the current instance before creating a new one
@@ -43,6 +42,7 @@ const Footer = ({ currentTrack }) => {
       });
 
       wavesurferRef.current.load(
+        // `http://localhost:8000/api/music/tracks/${currentTrack.trackId}/play`
         currentTrack.trackFile
       );
       wavesurferRef.current.play();
@@ -95,6 +95,7 @@ const Footer = ({ currentTrack }) => {
       <div>
         <div>
           <img
+            // src={`http://localhost:8000${currentTrack.trackAlbumCover}`}
             src={currentTrack.trackAlbumCover}
             alt={`${currentTrack.trackTitle} cover`}
           />
@@ -147,7 +148,8 @@ const Footer = ({ currentTrack }) => {
             )}
           </IconButton>
           {!storeMobileView && (
-            <IconButton onClick={() => downloadSong(currentTrack)}>
+            // <IconButton onClick={() => downloadSong(currentTrack)}>
+            <IconButton>
               <DownloadIcon
                 fontSize="large"
                 sx={{
