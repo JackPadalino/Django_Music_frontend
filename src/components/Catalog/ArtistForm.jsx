@@ -27,26 +27,43 @@ const ArtistForm = ({ handleModalClose }) => {
     setArtist("");
   };
 
+  // const postNewArtist = async (e) => {
+  //   e.preventDefault();
+  //   if (formValid) {
+  //     try {
+  //       const body = new FormData();
+  //       body.append("name", artist);
+  //       const response = await axios.post(
+  //         `https://django-music-backend.onrender.com/api/music/artists/new`,
+  //         body
+  //       );
+  //       if (response.status === 200 || response.status === 201) {
+  //         const updatedArtistData = await axios.get(
+  //           "https://django-music-backend.onrender.com/api/music/artists"
+  //         );
+  //         dispatch(setStoreArtists(updatedArtistData.data));
+  //         setErrorMessage(false);
+  //         resetForm();
+  //         dispatch(setThrowConfetti(true));
+  //         handleModalClose && handleModalClose();
+  //       }
+  //     } catch (error) {
+  //       setErrorMessage(true);
+  //       console.error("Error uploading file:", error);
+  //     }
+  //   } else {
+  //     setErrorMessage(true);
+  //   }
+  // };
+
   const postNewArtist = async (e) => {
     e.preventDefault();
     if (formValid) {
       try {
-        const body = new FormData();
-        body.append("name", artist);
-        const response = await axios.post(
-          `https://django-music-backend.onrender.com/api/music/artists/new`,
-          body
-        );
-        if (response.status === 200 || response.status === 201) {
-          const updatedArtistData = await axios.get(
-            "https://django-music-backend.onrender.com/api/music/artists"
-          );
-          dispatch(setStoreArtists(updatedArtistData.data));
-          setErrorMessage(false);
-          resetForm();
-          dispatch(setThrowConfetti(true));
-          handleModalClose && handleModalClose();
-        }
+        setErrorMessage(false);
+        resetForm();
+        dispatch(setThrowConfetti(true));
+        handleModalClose && handleModalClose();
       } catch (error) {
         setErrorMessage(true);
         console.error("Error uploading file:", error);

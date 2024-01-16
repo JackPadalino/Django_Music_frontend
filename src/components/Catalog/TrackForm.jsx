@@ -60,33 +60,50 @@ const TrackForm = ({ handleModalClose }) => {
     oldFileInput.parentNode.replaceChild(newFileInput, oldFileInput);
   };
 
+  // const uploadFiles = async (e) => {
+  //   e.preventDefault();
+  //   if (formValid) {
+  //     try {
+  //       const body = new FormData();
+  //       body.append("title", title);
+  //       body.append("artist", artist);
+  //       body.append("genre", genre);
+  //       body.append("file", file);
+  //       const response = await axios.post(
+  //         `https://django-music-backend.onrender.com/api/music/tracks`,
+  //         body
+  //       );
+  //       if (response.status === 200 || response.status === 201) {
+  //         const updatedTrackData = await axios.get(
+  //           "https://django-music-backend.onrender.com/api/music/tracks"
+  //         );
+  //         dispatch(setStoreTracks(updatedTrackData.data));
+  //         const updatedArtistData = await axios.get(
+  //           "https://django-music-backend.onrender.com/api/music/artists"
+  //         );
+  //         dispatch(setStoreArtists(updatedArtistData.data));
+  //         setErrorMessage(false);
+  //         resetForm(); // reset form information
+  //         dispatch(setThrowConfetti(true));
+  //         handleModalClose && handleModalClose();
+  //       }
+  //     } catch (error) {
+  //       setErrorMessage(true);
+  //       console.error("Error uploading file:", error);
+  //     }
+  //   } else {
+  //     setErrorMessage(true);
+  //   }
+  // };
+
   const uploadFiles = async (e) => {
     e.preventDefault();
     if (formValid) {
       try {
-        const body = new FormData();
-        body.append("title", title);
-        body.append("artist", artist);
-        body.append("genre", genre);
-        body.append("file", file);
-        const response = await axios.post(
-          `https://django-music-backend.onrender.com/api/music/tracks`,
-          body
-        );
-        if (response.status === 200 || response.status === 201) {
-          const updatedTrackData = await axios.get(
-            "https://django-music-backend.onrender.com/api/music/tracks"
-          );
-          dispatch(setStoreTracks(updatedTrackData.data));
-          const updatedArtistData = await axios.get(
-            "https://django-music-backend.onrender.com/api/music/artists"
-          );
-          dispatch(setStoreArtists(updatedArtistData.data));
-          setErrorMessage(false);
-          resetForm(); // reset form information
-          dispatch(setThrowConfetti(true));
-          handleModalClose && handleModalClose();
-        }
+        setErrorMessage(false);
+        resetForm(); // reset form information
+        dispatch(setThrowConfetti(true));
+        handleModalClose && handleModalClose();
       } catch (error) {
         setErrorMessage(true);
         console.error("Error uploading file:", error);
