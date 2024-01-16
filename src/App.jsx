@@ -19,6 +19,7 @@ function App() {
       .get("https://django-music-backend.onrender.com/api/music/tracks")
       .then((trackData) => {
         dispatch(setStoreTracks(trackData.data));
+        console.log(trackData.data)
         return axios.get("https://django-music-backend.onrender.com/api/music/artists");
       })
       .then((artistData) => {

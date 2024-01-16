@@ -44,9 +44,10 @@ const Home = () => {
   const { storeStyles } = useSelector((state) => state.style);
   const { storeTracks } = useSelector((state) => state.music);
 
-  const handlePlay = (trackId, trackTitle, trackArtist, trackAlbumCover) => {
+  const handlePlay = (trackId, trackFile, trackTitle, trackArtist, trackAlbumCover) => {
     setCurrentTrack({
       trackId: trackId,
+      trackFile:trackFile,
       trackTitle: trackTitle,
       trackArtist: trackArtist,
       trackAlbumCover: trackAlbumCover,
@@ -56,7 +57,8 @@ const Home = () => {
 
   // Carousl logic
   const images = storeTracks.map(
-    (image) => `https://django-music-backend.onrender.com${image.album_cover}`
+    (image) => `${image.album_cover}`
+    // (image) => `http://localhost:8000${image.album_cover}`
   );
   const [[page, direction], setPage] = useState([0, 0]);
   const [carouselTrack, setCarouselTrack] = useState(null);
@@ -122,10 +124,11 @@ const Home = () => {
                 <IconButton
                   onClick={() =>
                     handlePlay(
-                      carouselTrack.id,
-                      carouselTrack.title,
-                      carouselTrack.artist.name,
-                      carouselTrack.album_cover
+                    carouselTrack.id,
+                    carouselTrack.file,
+                    carouselTrack.title,
+                    carouselTrack.artist.name,
+                    carouselTrack.album_cover
                     )
                   }
                 >
@@ -185,6 +188,7 @@ const Home = () => {
                 onClick={() =>
                   handlePlay(
                     carouselTrack.id,
+                    carouselTrack.file,
                     carouselTrack.title,
                     carouselTrack.artist.name,
                     carouselTrack.album_cover
