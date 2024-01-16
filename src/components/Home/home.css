@@ -37,6 +37,13 @@
     color: white;
     font-size: 15px;
   }
+
+  .homePageRight{
+    display:flex;
+    flex-direction: column;
+    width:fit-content;
+    gap:15px;
+  }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 1280px) {
@@ -63,6 +70,13 @@
     overflow: hidden;
     position: relative;
   }
+
+  .homePageRight{
+    display:flex;
+    flex-direction: column;
+    width:fit-content;
+    gap:15px;
+  }
 }
 
 @media only screen and (min-width: 1280px) {
@@ -88,5 +102,12 @@
     align-items: center;
     overflow: hidden;
     position: relative;
+  }
+
+  .homePageRight{
+    display:flex;
+    flex-direction: column;
+    width:fit-content;
+    gap:15px;
   }
 }

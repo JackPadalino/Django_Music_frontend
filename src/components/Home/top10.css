@@ -19,6 +19,7 @@
     transition: color 0.5s ease;
     font-size: 20px;
   }
+
   .miniChartDivContainer {
     display: flex;
     flex-direction: column;
@@ -40,7 +41,7 @@
 }
 @media only screen and (min-width: 600px) and (max-width: 1280px) {
   .top10Container {
-    width: 15%;
+    /* width: 15%; */
     padding: 15px;
     background-color: rgb(52, 52, 52);
     font-family: Roboto;
@@ -74,11 +75,17 @@
     gap: 5px;
     overflow: hidden;
   }
+
+  .miniChartDivContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
 }
 
 @media only screen and (min-width: 1280px) {
   .top10Container {
-    width: 10%;
+    /* width: 10%; */
     padding: 15px;
     background-color: rgb(52, 52, 52);
     font-family: Roboto;
@@ -111,5 +118,11 @@
     flex-direction: column;
     gap: 5px;
     overflow: hidden;
+  }
+
+  .miniChartDivContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
   }
 }

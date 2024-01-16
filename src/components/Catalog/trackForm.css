@@ -1,41 +1,129 @@
-.newTrackFormContainer {
-  width: 15%;
+@media only screen and (max-width: 600px) {
+  .newTrackFormContainer {
+    width: 50%;
+  }
+  
+  #trackUploadForm {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  
+  .newTrackTitleInput {
+    border: none;
+    border-radius: 3px;
+    height: 30px;
+    padding-left: 5px;
+  }
+  
+  .newTrackAristInput {
+    border: none;
+    border-radius: 3px;
+    height: 30px;
+    padding-left: 5px;
+  }
+  
+  .newTrackGenreInput {
+    border: none;
+    border-radius: 3px;
+    height: 30px;
+    padding-left: 5px;
+  }
+  
+  .submit-btn {
+    margin: 0px;
+    color: black;
+    border-radius: 3px;
+    border: none;
+    height: 30px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: lightgreen;
+  }
 }
-
-#trackUploadForm {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
+@media only screen and (min-width: 600px) and (max-width: 1280px) {
+  .newTrackFormContainer {
+    width: 33%;
+  }
+  
+  #trackUploadForm {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  
+  .newTrackTitleInput {
+    border: none;
+    border-radius: 3px;
+    height: 30px;
+    padding-left: 5px;
+  }
+  
+  .newTrackAristInput {
+    border: none;
+    border-radius: 3px;
+    height: 30px;
+    padding-left: 5px;
+  }
+  
+  .newTrackGenreInput {
+    border: none;
+    border-radius: 3px;
+    height: 30px;
+    padding-left: 5px;
+  }
+  
+  .submit-btn {
+    margin: 0px;
+    color: black;
+    border-radius: 3px;
+    border: none;
+    height: 30px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: lightgreen;
+  }
 }
-
-.newTrackTitleInput {
-  border: none;
-  border-radius: 3px;
-  height: 30px;
-  padding-left: 5px;
-}
-
-.newTrackAristInput {
-  border: none;
-  border-radius: 3px;
-  height: 30px;
-  padding-left: 5px;
-}
-
-.newTrackGenreInput {
-  border: none;
-  border-radius: 3px;
-  height: 30px;
-  padding-left: 5px;
-}
-
-.submit-btn {
-  margin: 0px;
-  color: black;
-  border-radius: 3px;
-  border: none;
-  height: 30px;
-  padding: 5px;
-  cursor: pointer;
-  background-color: lightgreen;
+@media only screen and (min-width: 1280px) {
+  .newTrackFormContainer {
+    width: 15%;
+  }
+  
+  #trackUploadForm {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  
+  .newTrackTitleInput {
+    border: none;
+    border-radius: 3px;
+    height: 30px;
+    padding-left: 5px;
+  }
+  
+  .newTrackAristInput {
+    border: none;
+    border-radius: 3px;
+    height: 30px;
+    padding-left: 5px;
+  }
+  
+  .newTrackGenreInput {
+    border: none;
+    border-radius: 3px;
+    height: 30px;
+    padding-left: 5px;
+  }
+  
+  .submit-btn {
+    margin: 0px;
+    color: black;
+    border-radius: 3px;
+    border: none;
+    height: 30px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: lightgreen;
+  }
 }

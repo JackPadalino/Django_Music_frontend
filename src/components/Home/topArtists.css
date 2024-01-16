@@ -1,0 +1,130 @@
+@media only screen and (max-width: 600px) {
+    .topArtistsContainer {
+        width: 90%;
+        padding: 15px;
+        background-color: rgb(52, 52, 52);
+        font-family: Roboto;
+        height: fit-content;
+    }
+    
+    .artistsHeader {
+        color: white;
+        padding-bottom: 10px;
+        font-size: 20px;
+        border-bottom: 1px solid grey;
+    }
+    
+    .artist {
+        color: grey;
+        position: relative;
+        transition: color 0.5s ease;
+        font-size: 20px;
+    }
+    
+    .miniArtistDiv {
+        height: fit-content;
+        padding: 5px;
+        background-color: rgb(52, 52, 52);
+    }
+
+    .topArtistsInner {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        overflow: hidden;
+    }
+
+    .miniArtistDivContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+  }
+  @media only screen and (min-width: 600px) and (max-width: 1280px) {
+    .topArtistsContainer {
+        /* width: 10%; */
+        padding: 15px;
+        background-color: rgb(52, 52, 52);
+        font-family: Roboto;
+        height: fit-content;
+    }
+    
+    .artistsHeader {
+        color: white;
+        padding-bottom: 10px;
+        font-size: 10px;
+        border-bottom: 1px solid grey;
+    }
+    
+    .artist {
+        color: grey;
+        position: relative;
+        transition: color 0.5s ease;
+        font-size: 10px;
+    }
+    
+    .artist:hover {
+        color: white;
+        cursor: pointer;
+        animation: slide 5s linear;
+        animation-delay: 1s;
+    }
+    
+    .topArtistsInner {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        overflow: hidden;
+    }
+
+    .miniArtistDivContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+  }
+  
+  @media only screen and (min-width: 1280px) {
+    .topArtistsContainer {
+      /* width: 10%; */
+      padding: 15px;
+      background-color: rgb(52, 52, 52);
+      font-family: Roboto;
+      height: fit-content;
+    }
+  
+    .artistsHeader {
+      color: white;
+      padding-bottom: 10px;
+      font-size: 20px;
+      border-bottom: 1px solid grey;
+    }
+  
+    .artist {
+      color: grey;
+      position: relative;
+      transition: color 0.5s ease;
+      font-size: 15px;
+    }
+  
+    .artist:hover {
+      color: white;
+      cursor: pointer;
+      animation: slide 5s linear;
+      animation-delay: 1s;
+    }
+  
+    .topArtistsInner {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      overflow: hidden;
+    }
+
+    .miniArtistDivContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+  }
+  

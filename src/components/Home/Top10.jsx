@@ -3,15 +3,13 @@ import "./top10.css";
 
 const Top10 = () => {
   const charts = [
-    "Planet Rhythm",
-    "Lars Huismann",
-    "Chlar",
-    "Hector Oaks",
-    "Helena Haufman",
-    "Mutual Rytm",
-    "SLKT",
-    "Sway Records",
-    "DJ Mika",
+    "Techno",
+    "Disco",
+    "Nu Disco",
+    "Hardgroove",
+    "House",
+    "DnB",
+    "Melodic House"
   ];
 
   return (

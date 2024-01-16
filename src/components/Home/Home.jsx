@@ -11,6 +11,7 @@ import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import Footer from "./Footer";
 import LeftMenu from "./LeftMenu";
 import Top10 from "./Top10";
+import TopArtists from "./TopArtists";
 import "./carousel.css";
 import "./home.css";
 
@@ -148,7 +149,10 @@ const Home = () => {
             </div>
           </div>
         )}
-        <Top10 />
+        <div className="homePageRight">
+          <Top10 />
+          <TopArtists />
+        </div>
       </div>
       <div className="homeMobileContainer">
         {renderCarousel && (
@@ -209,6 +213,7 @@ const Home = () => {
           </>
         )}
         <Top10 />
+        {/* <TopArtists /> */}
       </div>
       {renderFooter && <Footer currentTrack={currentTrack} />}
     </>
